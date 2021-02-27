@@ -8,7 +8,7 @@
 #define HorizontalStep 2
 
 
-#include "Sensors.h" //download from: github.com/hshshv/Sensors
+#include "Sensors.h"
 #include "Servo.h"
 #include "Coordinate.h"
 #include "SEngine.h"
@@ -27,10 +27,10 @@ Coordinate lastCo(0.0, 0.0, 0.0);
 void loop()
 {
   HorizontalServo.Goto(HorizontalStart);
-  VerticalServo.Goto(VerticalStart);
   while (HorizontalServo.GetDegrees() < HorizontalEnd)
   {
     HorizontalServo.Move(HorizontalStep);
+    VerticalServo.Goto(VerticalStart);
     while (VerticalServo.GetDegrees() < VerticalEnd)
     {
       VerticalServo.Move(VerticalStep);
