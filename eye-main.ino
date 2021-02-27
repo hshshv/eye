@@ -8,7 +8,7 @@
 #define HorizontalStep 2
 
 
-#include "Sensors.h"
+#include "Sensors.h" //download from: github.com/hshshv/Sensors
 #include "Servo.h"
 #include "Coordinate.h"
 #include "SEngine.h"
